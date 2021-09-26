@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+path="res://.import/ClickMask.png-8dab94efeb7f6b558dcb8620b1b4e26e.res"
+
+[deps]
+
+source_file="res://App/CircleTimer/ClickMask.png"
+dest_files=[ "res://.import/ClickMask.png-8dab94efeb7f6b558dcb8620b1b4e26e.res" ]
+
+[params]
+
+create_from=0
+threshold=0.5

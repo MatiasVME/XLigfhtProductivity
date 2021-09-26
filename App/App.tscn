@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://App/CircleTimer/CircleTime.tscn" type="PackedScene" id=1]
+
+[node name="App" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 720, 1280 )
+color = Color( 0.172549, 0.196078, 0.25098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="ColorRect" parent="."]
+margin_right = 720.0
+margin_bottom = 96.0
+color = Color( 0.776471, 0.741176, 0.94902, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TaskList" type="ColorRect" parent="."]
+margin_top = 96.0
+margin_right = 544.0
+margin_bottom = 264.0
+color = Color( 0.52549, 0.905882, 0.921569, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FinishedTasks" type="ColorRect" parent="."]
+margin_top = 1112.0
+margin_right = 544.0
+margin_bottom = 1280.0
+color = Color( 0.52549, 0.905882, 0.921569, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DropArea" type="ColorRect" parent="."]
+margin_left = 544.0
+margin_top = 264.0
+margin_right = 720.0
+margin_bottom = 1112.0
+color = Color( 0.94902, 0.733333, 0.792157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Edges" type="StaticBody2D" parent="."]
+
+[node name="Collision" type="CollisionPolygon2D" parent="Edges"]
+polygon = PoolVector2Array( 0, 248, -16, 248, -16, 1128, 560, 1128, 560, 248, 0, 248, 0, 264, 544, 264, 544, 1112, 0, 1112 )
+
+[node name="CircleTime" parent="." instance=ExtResource( 1 )]
+position = Vector2( 128, 408 )
+
+[node name="CircleTime2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 392, 392 )
+
+[node name="CircleTime3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 264, 544 )
+
+[node name="CircleTime4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 104, 680 )
+
+[node name="CircleTime5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 320, 776 )
+
+[node name="CircleTime6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 320, 776 )
+
+[node name="CircleTime7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 320, 776 )

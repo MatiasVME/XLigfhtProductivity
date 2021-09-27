@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fonts/Gemunu_Libre/GemunuLibre-Light.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="PhysicsMaterial" id=3]
+bounce = 0.6
+
+[sub_resource type="DynamicFont" id=1]
+size = 26
+font_data = ExtResource( 1 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 160, 55.512 )
+
+[node name="Task" type="RigidBody2D"]
+mode = 2
+physics_material_override = SubResource( 3 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 320.0
+margin_bottom = 100.0
+color = Color( 0.52549, 0.905882, 0.921569, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" type="Label" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.172549, 0.196078, 0.25098, 1 )
+text = "Unificar la mecánica cuántica con la teoría de la relatividad. Y Saber cosas importantes."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 160, 50.3814 )
+shape = SubResource( 2 )

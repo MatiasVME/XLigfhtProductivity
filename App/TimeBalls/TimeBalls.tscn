@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://App/CircleTimer/CircleInUse.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/Gemunu_Libre/GemunuLibre-ExtraBold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://App/CircleTimer/CircleNormal.png" type="Texture" id=3]
+[ext_resource path="res://App/TimeBalls/TimeBalls.gd" type="Script" id=4]
+
+[sub_resource type="PhysicsMaterial" id=3]
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 50.3333
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Hit",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "Normal",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 43
+font_data = ExtResource( 2 )
+
+[node name="TimeBalls" type="RigidBody2D"]
+mode = 2
+physics_material_override = SubResource( 3 )
+script = ExtResource( 4 )
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.430581, 0.430581 )
+frames = SubResource( 4 )
+animation = "Hit"
+
+[node name="Text" type="Label" parent="."]
+margin_left = -49.0
+margin_top = -49.0
+margin_right = 50.0
+margin_bottom = 49.0
+custom_fonts/font = SubResource( 2 )
+text = "45m"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

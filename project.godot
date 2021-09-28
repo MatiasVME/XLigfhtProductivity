@@ -14,6 +14,11 @@ config/name="X Light Productivity"
 run/main_scene="res://App/App.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Signals="*res://App/Signals.gd"
+TaskManager="*res://App/Managers/TaskManager.gd"
+
 [display]
 
 window/size/width=720
